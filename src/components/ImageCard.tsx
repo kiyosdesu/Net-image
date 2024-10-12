@@ -44,7 +44,7 @@ const ImageCard = ({ imageSource, likes }: Props) => {
                 textAlign="center"
                 bottom="0"
               >
-                <Box color="red" padding="1vh" borderRadius="2vh">
+                <Box color="#E53E3E" padding="1vh" borderRadius="2vh">
                   {/* <StarIcon /> */}
                   {likes} likes
                 </Box>
