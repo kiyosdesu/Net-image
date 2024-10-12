@@ -1,11 +1,13 @@
-import { Box, HStack, Show, VStack } from "@chakra-ui/react";
+import { Box, HStack, Show, VStack, useColorMode } from "@chakra-ui/react";
 import SearchBar from "./SearchBar";
 import RecommendedPhotos from "./RecommendedPhotos";
+import ColorModeSwitch from "./ColorModeSwitch";
 import TItle from "./TItle";
 import Insta from "../Insta";
 // import CustomDrawer from "./CustomDrawer";
 
 const NavBar = () => {
+  const { colorMode } = useColorMode();
   return (
     <>
       <VStack width="100%">
@@ -13,7 +15,7 @@ const NavBar = () => {
           // alignSelf="flex-start"
           id="TITLE"
           width="100%"
-          bg="#3d3d52"
+          bg={colorMode === "dark" ? "#2D3748" : "#F7FAFC"}
           position="fixed"
           zIndex="10"
           p="0"
@@ -23,7 +25,10 @@ const NavBar = () => {
             <SearchBar />
             <Box>
               <Show above="sm">
-                <Insta />
+                <HStack>
+                  <Insta />
+                  <ColorModeSwitch />
+                </HStack>
               </Show>
             </Box>
             {/* <Show below="sm">

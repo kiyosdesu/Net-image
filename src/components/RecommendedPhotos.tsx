@@ -31,7 +31,7 @@ const RecommendedPhotos = () => {
           <Button
             boxShadow="-15px 15px 0px #000000,
                     15px -15px 0px #000000;"
-            bg="#3d3d52"
+            // bg="#3d3d52"
             rounded="md"
             px="9"
             py="5"
